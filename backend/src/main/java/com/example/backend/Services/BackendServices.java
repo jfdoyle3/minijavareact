@@ -24,7 +24,7 @@ public class BackendServices {
 	public User findByName(String name) {
 		List<User> users = UserData.userList();
 		for (User user : users) {
-			if (user.getName().contentEquals(name)) {
+			if (user.getFirstName().contentEquals(name)) {
 				return user;
 			}
 		}

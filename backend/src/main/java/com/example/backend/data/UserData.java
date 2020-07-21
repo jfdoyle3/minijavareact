@@ -11,11 +11,13 @@ public class UserData {
 
 	public static List<User> userList() {
 
-		String user1 = "user1";
-		String user2 = "user2";
+		String firstName1 = "firstname1";
+		String lastName1 = "lastname1";
+		String firstName2 = "firstname2";
+		String lastName2 = "lastname2";
 
-		User userA = new User(1, user1);
-		User userB = new User(2, user2);
+		User userA = new User(1, firstName1,lastName1);
+		User userB = new User(2, firstName2,lastName2);
 		users.add(userA);
 		users.add(userB);
 
