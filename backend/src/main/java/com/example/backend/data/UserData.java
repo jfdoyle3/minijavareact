@@ -3,6 +3,7 @@ package com.example.backend.data;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.backend.entity.objects.UserEntity;
 import com.example.backend.objects.User;
 
 public class UserData {
@@ -16,8 +17,8 @@ public class UserData {
 		String firstName2 = "firstname2";
 		String lastName2 = "lastname2";
 
-		User userA = new User(1, firstName1,lastName1);
-		User userB = new User(2, firstName2,lastName2);
+		User userA = new User(firstName1,lastName1);
+		User userB = new User(firstName2,lastName2);
 		users.add(userA);
 		users.add(userB);
 

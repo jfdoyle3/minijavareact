@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.backend.Services.BackendServices;
+import com.example.backend.entity.objects.UserEntity;
 import com.example.backend.objects.Bio;
 import com.example.backend.objects.User;
 
@@ -22,7 +23,7 @@ public class BackendController {
 
 	// GET: All Users
 	@GetMapping("/userlist")
-	public List<User> getAllUsers() {
+	public List<UserEntity> getAllUsers() {
 		return backendServices.findAllUsers();
 	}
 
@@ -34,7 +35,7 @@ public class BackendController {
 	
 	// Get: Get by name
 	@GetMapping("/user/{name}")
-	public User getByName(@PathVariable String name) {
+	public UserEntity getByName(@PathVariable String name) {
 		return backendServices.findByName(name);
 	}
 	}

@@ -1,19 +1,35 @@
-package com.example.backend.objects;
+package com.example.backend.entity.objects;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-public class User {
+@Entity
+@Table(name="user")
+public class UserEntity {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id")
 	private int id;
+	
+	@Column(name="first_name")
 	private String firstName;
+	
+	@Column(name="last_name")
 	private String lastName;
 	
-	public User() {}
+	public UserEntity() {}
 
-	public User( String firstName, String lastName) {
-	
+	public UserEntity( String firstName, String lastName) {
+		
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
+
 
 
 	public String getFirstName() {

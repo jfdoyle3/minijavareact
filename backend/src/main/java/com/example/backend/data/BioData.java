@@ -17,8 +17,8 @@ public class BioData extends User{
 		String bio2="Bio2";
 		
 	
-			Bio bioA=new Bio(1, bio1);
-			Bio bioB=new Bio(2, bio2);
+			Bio bioA=new Bio(bio1);
+			Bio bioB=new Bio(bio2);
 			userBio.add(bioA);
 			userBio.add(bioB);
 			

@@ -1,14 +1,21 @@
-package com.example.backend.objects;
+package com.example.backend.entity.objects;
 
-public class Bio {
+public class BioEntity {
 	private int id;
 	private String description;
-	public Bio() {}
+	public BioEntity() {}
 	
-	public Bio(String description) {
+	public BioEntity(int id, String description) {
+	
+		this.id = id;
 		this.description = description;
 	}
-
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getDescription() {
 		return description;
 	}
