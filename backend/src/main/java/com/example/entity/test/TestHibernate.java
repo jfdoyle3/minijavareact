@@ -1,4 +1,4 @@
-package com.example.backend.main;
+package com.example.entity.test;
 
 import java.util.List;
 
@@ -6,8 +6,9 @@ import org.hibernate.Session;
 
 import com.example.backend.data.UserData;
 import com.example.backend.data.UserEntityData;
-import com.example.backend.entity.objects.UserEntity;
 import com.example.backend.objects.User;
+import com.example.entity.factory.HibernateUtil;
+import com.example.entity.objects.UserEntity;
 
 public class TestHibernate {
 

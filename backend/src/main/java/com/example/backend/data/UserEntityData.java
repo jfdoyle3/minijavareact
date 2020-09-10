@@ -3,7 +3,7 @@ package com.example.backend.data;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.backend.entity.objects.UserEntity;
+import com.example.entity.objects.UserEntity;
 
 public class UserEntityData {
 

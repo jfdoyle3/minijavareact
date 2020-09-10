@@ -1,10 +1,10 @@
-package com.example.backend.main;
+package com.example.entity.factory;
 
 import java.io.File;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.example.backend.entity.objects.UserEntity;
+import com.example.entity.objects.UserEntity;
 
 public class HibernateUtil {
 	private static final SessionFactory sessionFactory = buildSessionFactory();

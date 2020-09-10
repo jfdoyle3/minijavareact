@@ -1,4 +1,4 @@
-package com.example.backend.Services;
+package com.example.backend.services;
 
 import java.util.List;
 
@@ -6,16 +6,18 @@ import org.springframework.stereotype.Service;
 
 import com.example.backend.data.BioData;
 import com.example.backend.data.UserEntityData;
-import com.example.backend.entity.objects.UserEntity;
 import com.example.backend.objects.Bio;
 import com.example.backend.objects.User;
+import com.example.entity.crud.GetAllUsers;
+import com.example.entity.objects.UserEntity;
 
 
 @Service
 public class BackendServices {
+	
 
-	public List<UserEntity> findAllUsers() {
-		return UserEntityData.UserEntityList();
+	public List<User> findAllUsers() {
+		return GetAllUsers.AllUsers();
 	}
 
 	public List<Bio> findAllBios() {

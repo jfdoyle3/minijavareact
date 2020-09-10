@@ -1,4 +1,4 @@
-package com.example.backend.entity.objects;
+package com.example.entity.objects;
 
 public class BioEntity {
 	private int id;

@@ -10,11 +10,20 @@ public class User {
 	public User() {}
 
 	public User( String firstName, String lastName) {
-	
+		
+		
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
 
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getFirstName() {
 		return firstName;

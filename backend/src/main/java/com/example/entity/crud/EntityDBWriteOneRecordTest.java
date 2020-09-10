@@ -1,10 +1,10 @@
-package  com.example.backend.main;
+package  com.example.entity.crud;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.example.backend.entity.objects.UserEntity;
+import com.example.entity.objects.UserEntity;
 
 
 
