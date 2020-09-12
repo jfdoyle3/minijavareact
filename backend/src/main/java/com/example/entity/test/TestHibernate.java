@@ -8,7 +8,7 @@ import com.example.backend.data.UserData;
 import com.example.backend.data.UserEntityData;
 import com.example.backend.objects.User;
 import com.example.entity.factory.HibernateUtil;
-import com.example.entity.objects.UserEntity;
+import com.example.backend.objects.User;
 
 public class TestHibernate {
 
@@ -18,8 +18,8 @@ public class TestHibernate {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
 
-		List<UserEntity> users=UserEntityData.UserEntityList();
-		for (UserEntity user: users)
+		List<com.example.entity.objects.User> users=UserEntityData.UserEntityList();
+		for (com.example.entity.objects.User user: users)
 		session.save(user);
 
 		// 

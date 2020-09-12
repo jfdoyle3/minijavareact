@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.example.entity.objects.UserEntity;
+import com.example.entity.objects.User;
 
 
 
@@ -13,14 +13,14 @@ public class EntityDBWriteOneRecordTest {
 	public static void RunASession() {
 
 		SessionFactory factory = new Configuration().configure()
-				.addAnnotatedClass(UserEntity.class)
+				.addAnnotatedClass(User.class)
 				.buildSessionFactory();
 
 		Session session = factory.getCurrentSession();
 
 		try {
 
-			UserEntity user = new UserEntity("Jim","Doyle");
+			User user = new User("Jim","Doyle");
 
 			session.beginTransaction();
 

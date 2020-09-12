@@ -1,0 +1,39 @@
+	public List<User> findAllUsers() {
+		return GetAllUsers.AllUsers();
+	}
+
+	public List<Bio> findAllBios() {
+		return BioData.bioList();
+	}
+
+	public UserEntity findByName(String name) {
+		List<UserEntity> users = UserEntityData.UserEntityList();
+		for (UserEntity user : users) {
+			if (user.getFirstName().contentEquals(name)) {
+				return user;
+			}
+		}
+		return null;
+	}
+	
+	
+	
+	// Controller
+	
+		// GET: All Users
+	@GetMapping("/userlist")
+	public List<User> getAllUsers() {
+		return backendServices.findAllUsers();
+	}
+
+	// GET: All Bios
+	@GetMapping("/biolist")
+	public List<Bio> getAllBios(){
+			return backendServices.findAllBios();
+	}
+	
+	// Get: Get by name
+	@GetMapping("/user/{name}")
+	public EntityUser getByName(@PathVariable String name) {
+		return backendServices.findByName(name);
+	}

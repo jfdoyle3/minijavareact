@@ -9,28 +9,36 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="user")
-public class UserEntity {
+public class User {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
 	
-	@Column(name="first_name")
+	//@Column(name="first_name")
 	private String firstName;
 	
-	@Column(name="last_name")
+	//@Column(name="last_name")
 	private String lastName;
 	
-	public UserEntity() {}
+	public User() {}
 
-	public UserEntity( String firstName, String lastName) {
+	public User( String firstName, String lastName) {
 		
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
 
 
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -52,7 +60,6 @@ public class UserEntity {
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
-	
-	
+
 
 }
